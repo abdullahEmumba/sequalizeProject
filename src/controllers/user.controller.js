@@ -81,13 +81,13 @@ exports.deleteUser = (req, res) => {
 //Count Total Users
 exports.countTotal = async (req, res) => {
   await User.count()
-  .then(c => {
-      console.log(c)
+    .then((c) => {
+      console.log(c);
       res.send({
-          "Count":c
-      })
-  })
-  .catch(error => {
-      res.status(400).send(error)
-  })
+        Count: c,
+      });
+    })
+    .catch((error) => {
+      res.status(400).send(error);
+    });
 };
